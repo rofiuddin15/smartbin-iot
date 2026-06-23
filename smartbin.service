@@ -5,11 +5,11 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-User=pi
-WorkingDirectory=/home/pi/Development/smartbin/rasberry-py
+User=eka
+WorkingDirectory=/home/eka/smartbin-iot
 # Ganti /home/pi/ dengan username Raspberry Pi Anda jika berbeda
 # Jika menggunakan Virtual Environment (venv), ubah path python di bawah ini
-ExecStart=/usr/bin/python3 /home/pi/Development/smartbin/rasberry-py/smartbin_iot.py
+ExecStart=/usr/bin/python3 /home/eka/smartbin-iot/smartbin_iot.py
 Restart=always
 RestartSec=5
 
