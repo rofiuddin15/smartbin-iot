@@ -175,6 +175,11 @@ def main():
                     if result[0] == 0:
                         print(f"TERDETEKSI: {bottle_name} ({int(confidence*100)}%) - Terkirim ke Sistem!")
                         last_detect_time = current_time # Reset cooldown
+                        
+                        # [DEBUG] Simpan gambar terakhir yang memicu deteksi agar bisa dicek
+                        debug_img_path = os.path.join(SCRIPT_DIR, "last_detected.jpg")
+                        cv2.imwrite(debug_img_path, frame)
+                        print(f"[DEBUG] Gambar disimpan di: {debug_img_path}")
                     else:
                         print("Gagal mengirim data ke MQTT Broker")
 
